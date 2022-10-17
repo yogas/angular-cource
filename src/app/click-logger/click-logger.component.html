@@ -1,0 +1,14 @@
+<div>
+  <h3>Click logger</h3>
+  
+  <button class="btn btn-primary" (click)="toggleSecret()">Display Details</button>
+
+  <p *ngIf="secretVisible">Here is secret :)</p>
+
+  <div class="logs">
+    <p *ngFor="let item of logs; let idx = index;">
+      <span [ngStyle]="getStyle(idx)" [ngClass]="getClass(idx)">{{ item }}</span>
+    </p>
+  </div>
+</div>
+
